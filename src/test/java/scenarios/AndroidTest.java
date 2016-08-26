@@ -26,12 +26,12 @@ public class AndroidTest extends AndroidSetup {
     }
 
 
-    @Test(enabled = false)
+    @Test(enabled = true)
     public void loginTest() {
         loginPage.loginTo("test@mail.com","password123");
     }
 
-    @Test(enabled = true)
+    @Test(enabled = false)
     public void showTest() {
         String app_package_name = "com.linkedin.android:id/";
 
