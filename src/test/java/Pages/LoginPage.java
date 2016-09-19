@@ -20,6 +20,7 @@ public class LoginPage extends Page {
     By homeButton = By.id(app_package_name + "home_nav_tab_icon");
 
 
+
     public HomePage loginIntoProfile() {
         waitForVisibilityOf(firstSignIn);
         driver.findElement(firstSignIn).click();
