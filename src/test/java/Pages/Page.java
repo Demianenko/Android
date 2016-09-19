@@ -4,6 +4,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -28,8 +29,10 @@ public class Page extends AndroidSetup{
 
     //Method that waits for visiability of UI element
     protected void waitForVisibilityOf(By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, 50);
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    protected void waitForVisibility(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
     public void swipeFromRightToLeft(){
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
